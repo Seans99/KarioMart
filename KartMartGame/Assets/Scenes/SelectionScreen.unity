@@ -476,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221742924}
   m_Layer: 5
-  m_Name: Track
+  m_Name: Track_select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1613,7 +1613,7 @@ GameObject:
   - component: {fileID: 817396581}
   - component: {fileID: 817396582}
   m_Layer: 5
-  m_Name: P1
+  m_Name: P1_select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1690,7 +1690,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8644309, g: 0.9811321, b: 0.4026344, a: 0}
+  m_BackGroundColor: {r: 0.078720205, g: 0.5754717, b: 0.45986667, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2146,7 +2146,7 @@ GameObject:
   - component: {fileID: 1208552861}
   - component: {fileID: 1208552862}
   m_Layer: 5
-  m_Name: P2
+  m_Name: P2_select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
