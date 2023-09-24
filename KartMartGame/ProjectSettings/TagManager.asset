@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Track
+    uniqueID: 3028915557
+    locked: 0
+  - name: Car
+    uniqueID: 2776486827
+    locked: 0
