@@ -47,7 +47,7 @@ public class PlayerSelect : MonoBehaviour
         }
     }
 
-    public void confirmPlayerSelection()
+    public void ConfirmPlayerSelection()
     {
         selectedCars.Add(cars[selected]);
     }
