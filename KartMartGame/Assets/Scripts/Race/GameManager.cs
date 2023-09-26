@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject player1;
     [SerializeField] GameObject player2;
 
+    [Header("Tracks")]
+    [SerializeField] Grid track1;
+
     [Header("UI")]
     [SerializeField] TextMeshProUGUI startupText;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] TextMeshProUGUI p1Laps;
+    [SerializeField] TextMeshProUGUI p2Laps;
 
     [Header("Leaderboard")]
     [SerializeField] GameObject leaderboard;
@@ -22,6 +27,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instantiate(track1, transform.position, Quaternion.identity);
+
         player1.gameObject.SetActive(false);
         player2.gameObject.SetActive(false);
         StartCoroutine(CountDown());
