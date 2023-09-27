@@ -809,6 +809,14 @@ PrefabInstance:
       propertyPath: playerControls.m_SingletonActionBindings.Array.data[4].m_Path
       value: <Keyboard>/rightArrow
       objectReference: {fileID: 0}
+    - target: {fileID: 3519439575653104038, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519439575653104038, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1518480469
+      objectReference: {fileID: 0}
     - target: {fileID: 4101090461818295802, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.5
@@ -3058,6 +3066,14 @@ PrefabInstance:
     - target: {fileID: 2481570980706223468, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
       propertyPath: _rotationSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519439575653104038, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519439575653104038, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1518480469
       objectReference: {fileID: 0}
     - target: {fileID: 4101090461818295802, guid: 6c328a4e767a64c4a9eec22a11d389c1, type: 3}
       propertyPath: m_LocalPosition.x
