@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject player2;
 
     [Header("Tracks")]
-    [SerializeField] Grid track1;
+    [SerializeField] Grid[] tracks;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI startupText;
@@ -22,12 +22,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject leaderboard;
     private List<GameObject> leaderboardList;
 
-    [SerializeField] GameObject[] tracks;
+    private int currentLapP1 = 0;
+    private int currentLapP2 = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(track1, transform.position, Quaternion.identity);
+        GameManagerStatic.gameManager = this;
+        Instantiate(tracks[1], transform.position, Quaternion.identity);
 
         player1.gameObject.SetActive(false);
         player2.gameObject.SetActive(false);
@@ -40,6 +42,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);
+        }
+        if (currentLapP1 > 3 || currentLapP2 > 3)
+        {
+            player1.gameObject.SetActive(false);
+            player2.gameObject.SetActive(false);
+            EndRace();
         }
     }
 
@@ -61,15 +69,32 @@ public class GameManager : MonoBehaviour
         player2.gameObject.SetActive(true);
     }
 
-    public void AddToLeaderboard(GameObject player)
-    {
-        leaderboardList.Add(player);
-    }
-
     public void EndRace()
     {
         player1.gameObject.SetActive(false);
         player2.gameObject.SetActive(false);
         leaderboard.gameObject.SetActive(true);
+    }
+
+    public void SetLap(string player)
+    {
+        switch (player)
+        {
+            case "Player1":
+                if (currentLapP1 < 3)
+                {
+                    currentLapP1++;
+                    p1Laps.text = "P1: " + currentLapP1 + "/3";
+                }
+                break;
+
+            case "Player2":
+                if (currentLapP2 < 3)
+                {
+                    currentLapP2++;
+                    p2Laps.text = "P2: " + currentLapP2 + "/3";
+                }
+                break;
+        }
     }
 }
