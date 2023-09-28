@@ -6,16 +6,16 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] Button restartBtn;
-    [SerializeField] Button titleScreenBtn;
-    [SerializeField] Button closeMenuBtn;
+    [SerializeField] Button _restartBtn;
+    [SerializeField] Button _titleScreenBtn;
+    [SerializeField] Button _closeMenuBtn;
 
     // Start is called before the first frame update
     void Start()
     {
-        Button restart = restartBtn.GetComponent<Button>();
-        Button titleScreen = titleScreenBtn.GetComponent<Button>();
-        Button close = closeMenuBtn.GetComponent<Button>();
+        Button restart = _restartBtn.GetComponent<Button>();
+        Button titleScreen = _titleScreenBtn.GetComponent<Button>();
+        Button close = _closeMenuBtn.GetComponent<Button>();
 
         restart.onClick.AddListener(Restart);
         titleScreen.onClick.AddListener(TitleScreen);

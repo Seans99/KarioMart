@@ -6,32 +6,41 @@ using UnityEngine.UI;
 
 public class PlayerSelect : MonoBehaviour
 {
-    [SerializeField] private Sprite[] cars;
-    [SerializeField] private Button nextBtn;
-    [SerializeField] private Button prevBtn;
+    [SerializeField] private Sprite[] _cars;
+    [SerializeField] private Button _nextBtn;
+    [SerializeField] private Button _prevBtn;
 
-    private List<Sprite> selectedCars;
+    [SerializeField] private GameData _gameData;
+
+    [SerializeField] private int playerId;
+
     private int selected = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Button next = nextBtn.GetComponent<Button>();
+        Button next = _nextBtn.GetComponent<Button>();
         next.onClick.AddListener(Next);
-        Button prev = prevBtn.GetComponent<Button>();
+        Button prev = _prevBtn.GetComponent<Button>();
         prev.onClick.AddListener(Prev);
     }
 
     void Update()
     {
-        gameObject.GetComponent<Image>().sprite = cars[selected];
+        gameObject.GetComponent<Image>().sprite = _cars[selected];
+        if (playerId == 1)
+        {
+            _gameData.Player1 = _cars[selected];
+        }
+        if (playerId == 2)
+        {
+            _gameData.Player2 = _cars[selected];
+        }
     }
 
     public void Next()
     {
-        Button next = nextBtn.GetComponent<Button>();
-
-        if (selected < cars.Length -1) 
+        if (selected < _cars.Length -1) 
         {
             selected++;
         }
@@ -39,16 +48,9 @@ public class PlayerSelect : MonoBehaviour
 
     private void Prev()
     {
-        Button prev = prevBtn.GetComponent<Button>();
-
         if (selected > 0)
         {
             selected--;
         }
-    }
-
-    public void ConfirmPlayerSelection()
-    {
-        selectedCars.Add(cars[selected]);
     }
 }

@@ -7,14 +7,14 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] Button playBtn;
-    [SerializeField] Button quitBtn;
+    [SerializeField] Button _playBtn;
+    [SerializeField] Button _quitBtn;
 
     // Start is called before the first frame update
     void Start()
     {
-        Button play = playBtn.GetComponent<Button>();
-        Button quit = quitBtn.GetComponent<Button>();
+        Button play = _playBtn.GetComponent<Button>();
+        Button quit = _quitBtn.GetComponent<Button>();
         play.onClick.AddListener(PlayGame);
         quit.onClick.AddListener(QuitGame);
     }

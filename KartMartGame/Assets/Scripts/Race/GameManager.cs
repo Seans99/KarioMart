@@ -5,34 +5,43 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Player prefabs")]
-    [SerializeField] GameObject player1;
-    [SerializeField] GameObject player2;
+    [Header("Players")]
+    [SerializeField] GameObject _player1;
+    [SerializeField] GameObject _player2;
 
     [Header("Tracks")]
-    [SerializeField] Grid[] tracks;
+    [SerializeField] Grid[] _tracks;
 
     [Header("UI")]
-    [SerializeField] TextMeshProUGUI startupText;
-    [SerializeField] GameObject pauseMenu;
-    [SerializeField] TextMeshProUGUI p1Laps;
-    [SerializeField] TextMeshProUGUI p2Laps;
+    [SerializeField] TextMeshProUGUI _startupText;
+    [SerializeField] GameObject _pauseMenu;
+    [SerializeField] TextMeshProUGUI _p1Laps;
+    [SerializeField] TextMeshProUGUI _p2Laps;
 
     [Header("Leaderboard")]
-    [SerializeField] GameObject leaderboard;
-    private List<GameObject> leaderboardList;
+    [SerializeField] GameObject _leaderboard;
+    private List<GameObject> _leaderboardList;
 
-    private int currentLapP1 = 0;
-    private int currentLapP2 = 0;
+    [Header("SO")]
+    [SerializeField] GameData _gameData;
+
+    private int _currentLapP1 = 0;
+    private int _currentLapP2 = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameManagerStatic.gameManager = this;
-        Instantiate(tracks[1], transform.position, Quaternion.identity);
+        SpriteRenderer playerCar1 = _player1.gameObject.GetComponent<SpriteRenderer>();
+        playerCar1.sprite = _gameData.Player1;
 
-        player1.gameObject.SetActive(false);
-        player2.gameObject.SetActive(false);
+        SpriteRenderer playerCar2 = _player1.gameObject.GetComponent<SpriteRenderer>();
+        playerCar2.sprite = _gameData.Player2;
+
+        GameManagerStatic.gameManager = this;
+        Instantiate(_tracks[1], transform.position, Quaternion.identity);
+
+        _player1.gameObject.SetActive(false);
+        _player2.gameObject.SetActive(false);
         StartCoroutine(CountDown());
     }
 
@@ -41,39 +50,39 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenu.SetActive(true);
+            _pauseMenu.SetActive(true);
         }
-        if (currentLapP1 > 3 || currentLapP2 > 3)
+        if (_currentLapP1 > 3 || _currentLapP2 > 3)
         {
-            player1.gameObject.SetActive(false);
-            player2.gameObject.SetActive(false);
+            _player1.gameObject.SetActive(false);
+            _player2.gameObject.SetActive(false);
             EndRace();
         }
     }
 
     IEnumerator CountDown() 
     {
-        startupText.gameObject.SetActive(true);
-        startupText.text = "Starting in...";
+        _startupText.gameObject.SetActive(true);
+        _startupText.text = "Starting in...";
         yield return new WaitForSeconds(1);
-        startupText.text = "3";
+        _startupText.text = "3";
         yield return new WaitForSeconds(1);
-        startupText.text = "2";
+        _startupText.text = "2";
         yield return new WaitForSeconds(1);
-        startupText.text = "1";
+        _startupText.text = "1";
         yield return new WaitForSeconds(1);
-        startupText.text = "GO!";
+        _startupText.text = "GO!";
         yield return new WaitForSeconds(0.5f);
-        startupText.gameObject.SetActive(false);
-        player1.gameObject.SetActive(true);
-        player2.gameObject.SetActive(true);
+        _startupText.gameObject.SetActive(false);
+        _player1.gameObject.SetActive(true);
+        _player2.gameObject.SetActive(true);
     }
 
     public void EndRace()
     {
-        player1.gameObject.SetActive(false);
-        player2.gameObject.SetActive(false);
-        leaderboard.gameObject.SetActive(true);
+        _player1.gameObject.SetActive(false);
+        _player2.gameObject.SetActive(false);
+        _leaderboard.gameObject.SetActive(true);
     }
 
     public void SetLap(string player)
@@ -81,18 +90,18 @@ public class GameManager : MonoBehaviour
         switch (player)
         {
             case "Player1":
-                if (currentLapP1 < 3)
+                if (_currentLapP1 < 3)
                 {
-                    currentLapP1++;
-                    p1Laps.text = "P1: " + currentLapP1 + "/3";
+                    _currentLapP1++;
+                    _p1Laps.text = "P1: " + _currentLapP1 + "/3";
                 }
                 break;
 
             case "Player2":
-                if (currentLapP2 < 3)
+                if (_currentLapP2 < 3)
                 {
-                    currentLapP2++;
-                    p2Laps.text = "P2: " + currentLapP2 + "/3";
+                    _currentLapP2++;
+                    _p2Laps.text = "P2: " + _currentLapP2 + "/3";
                 }
                 break;
         }

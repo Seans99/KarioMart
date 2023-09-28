@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class SelectionScreenUI : MonoBehaviour
 {
-    [SerializeField] private Button startRaceBtn;
-    [SerializeField] private Button titleScreenBtn;
+    [SerializeField] private Button _startRaceBtn;
+    [SerializeField] private Button _titleScreenBtn;
 
     void Start()
     {
-        Button start = startRaceBtn.GetComponent<Button>();
-        Button title = titleScreenBtn.GetComponent<Button>();
+        Button start = _startRaceBtn.GetComponent<Button>();
+        Button title = _titleScreenBtn.GetComponent<Button>();
         start.onClick.AddListener(StartRace);
         title.onClick.AddListener(ReturnToTitleScreen);
     }

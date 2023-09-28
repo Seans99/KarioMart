@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _speed = 3f;
     [SerializeField] private float _rotationSpeed = 5f;
     [SerializeField] private float _carDrift = 0.95f;
-    [SerializeField] private InputAction playerControls;
+    [SerializeField] private InputAction _playerControls;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -22,12 +22,12 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
-        playerControls.Enable();
+        _playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        _playerControls.Disable();
     }
 
     void Start()
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDirection = playerControls.ReadValue<Vector2>();
+        moveDirection = _playerControls.ReadValue<Vector2>();
           
     }
 

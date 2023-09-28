@@ -829,8 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc473091f33300641b9aa3e424c889d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRaceBtn: {fileID: 183196302}
-  titleScreenBtn: {fileID: 874566421}
+  _startRaceBtn: {fileID: 183196302}
+  _titleScreenBtn: {fileID: 874566421}
 --- !u!1 &366945073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,14 +1954,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471ea4ec96038a84cbf9b4276851fe1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cars:
+  _cars:
   - {fileID: 21300000, guid: 8b7c570d99bc29e4bb653ad617b40277, type: 3}
   - {fileID: 21300000, guid: 0f548f9d2f2ae7f4186baae312710027, type: 3}
   - {fileID: 21300000, guid: 415a870c7f8c31146b5eac8242af9393, type: 3}
-  - {fileID: 21300000, guid: 8c0a68d81c5283d4983c1e88cfa4a8e1, type: 3}
-  - {fileID: 21300000, guid: df8dcdc49ce59324f9b01aee5adca92a, type: 3}
-  nextBtn: {fileID: 1944239168}
-  prevBtn: {fileID: 654770518}
+  _nextBtn: {fileID: 1944239168}
+  _prevBtn: {fileID: 654770518}
+  _gameData: {fileID: 11400000, guid: a29a56629a562c745988392cb01cbf15, type: 2}
+  playerId: 1
 --- !u!1 &816270669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,14 +3562,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471ea4ec96038a84cbf9b4276851fe1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cars:
+  _cars:
   - {fileID: 21300000, guid: 8b7c570d99bc29e4bb653ad617b40277, type: 3}
   - {fileID: 21300000, guid: 0f548f9d2f2ae7f4186baae312710027, type: 3}
   - {fileID: 21300000, guid: 415a870c7f8c31146b5eac8242af9393, type: 3}
-  - {fileID: 21300000, guid: 8c0a68d81c5283d4983c1e88cfa4a8e1, type: 3}
-  - {fileID: 21300000, guid: df8dcdc49ce59324f9b01aee5adca92a, type: 3}
-  nextBtn: {fileID: 472621177}
-  prevBtn: {fileID: 914388304}
+  _nextBtn: {fileID: 472621177}
+  _prevBtn: {fileID: 914388304}
+  _gameData: {fileID: 11400000, guid: a29a56629a562c745988392cb01cbf15, type: 2}
+  playerId: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
