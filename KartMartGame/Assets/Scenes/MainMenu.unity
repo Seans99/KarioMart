@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7169812, g: 0.23335709, b: 0.23335709, a: 1}
     m_HighlightedColor: {r: 0.5849056, g: 0.19588822, b: 0.19588822, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.4811321, g: 0.17475079, b: 0.17475079, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -498,7 +498,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.10702208, g: 0.6132076, b: 0.1891029, a: 0}
+  m_BackGroundColor: {r: 0.17065683, g: 0.6132076, b: 0.24270001, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.25618547, g: 0.9528302, b: 0.28911507, a: 1}
     m_HighlightedColor: {r: 0.2793699, g: 0.8113208, b: 0.30341285, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.27033645, g: 0.7075472, b: 0.28962517, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1575,8 +1575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ae0c38906e6249a62af5f2fc1e488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playBtn: {fileID: 771172354}
-  quitBtn: {fileID: 37420229}
+  _playBtn: {fileID: 771172354}
+  _quitBtn: {fileID: 37420229}
 --- !u!1 &1458234560
 GameObject:
   m_ObjectHideFlags: 0

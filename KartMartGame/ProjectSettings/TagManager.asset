@@ -46,6 +46,9 @@ TagManager:
   - name: Track
     uniqueID: 3028915557
     locked: 0
+  - name: Track_tires
+    uniqueID: 526814859
+    locked: 0
   - name: Oil
     uniqueID: 1737933229
     locked: 0

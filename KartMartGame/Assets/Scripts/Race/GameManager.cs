@@ -17,10 +17,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _pauseMenu;
     [SerializeField] TextMeshProUGUI _p1Laps;
     [SerializeField] TextMeshProUGUI _p2Laps;
+    [SerializeField] GameObject _laps;
 
     [Header("Leaderboard")]
     [SerializeField] GameObject _leaderboard;
-    private List<GameObject> _leaderboardList;
+    [SerializeField] TextMeshProUGUI _firstPlace; 
+    [SerializeField] TextMeshProUGUI _secondPlace;
 
     [Header("SO")]
     [SerializeField] GameData _gameData;
@@ -34,14 +36,12 @@ public class GameManager : MonoBehaviour
         SpriteRenderer playerCar1 = _player1.gameObject.GetComponent<SpriteRenderer>();
         playerCar1.sprite = _gameData.Player1;
 
-        SpriteRenderer playerCar2 = _player1.gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer playerCar2 = _player2.gameObject.GetComponent<SpriteRenderer>();
         playerCar2.sprite = _gameData.Player2;
 
         GameManagerStatic.gameManager = this;
-        Instantiate(_tracks[1], transform.position, Quaternion.identity);
+        Instantiate(_tracks[_gameData.TrackId], transform.position, Quaternion.identity);
 
-        _player1.gameObject.SetActive(false);
-        _player2.gameObject.SetActive(false);
         StartCoroutine(CountDown());
     }
 
@@ -54,6 +54,16 @@ public class GameManager : MonoBehaviour
         }
         if (_currentLapP1 > 3 || _currentLapP2 > 3)
         {
+            if (_currentLapP1 > 3)
+            {
+                _firstPlace.text = "1. P1";
+                _secondPlace.text = "2. P2";
+            }
+            else
+            {
+                _firstPlace.text = "1. P2";
+                _secondPlace.text = "2. P1";
+            }
             _player1.gameObject.SetActive(false);
             _player2.gameObject.SetActive(false);
             EndRace();
@@ -64,7 +74,7 @@ public class GameManager : MonoBehaviour
     {
         _startupText.gameObject.SetActive(true);
         _startupText.text = "Starting in...";
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         _startupText.text = "3";
         yield return new WaitForSeconds(1);
         _startupText.text = "2";
@@ -74,6 +84,7 @@ public class GameManager : MonoBehaviour
         _startupText.text = "GO!";
         yield return new WaitForSeconds(0.5f);
         _startupText.gameObject.SetActive(false);
+        _laps.SetActive(true);
         _player1.gameObject.SetActive(true);
         _player2.gameObject.SetActive(true);
     }
@@ -82,6 +93,7 @@ public class GameManager : MonoBehaviour
     {
         _player1.gameObject.SetActive(false);
         _player2.gameObject.SetActive(false);
+        _laps.gameObject.SetActive(false);
         _leaderboard.gameObject.SetActive(true);
     }
 
@@ -90,7 +102,7 @@ public class GameManager : MonoBehaviour
         switch (player)
         {
             case "Player1":
-                if (_currentLapP1 < 3)
+                if (_currentLapP1 <= 3)
                 {
                     _currentLapP1++;
                     _p1Laps.text = "P1: " + _currentLapP1 + "/3";
@@ -98,7 +110,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case "Player2":
-                if (_currentLapP2 < 3)
+                if (_currentLapP2 <= 3)
                 {
                     _currentLapP2++;
                     _p2Laps.text = "P2: " + _currentLapP2 + "/3";
