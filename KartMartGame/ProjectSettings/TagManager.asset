@@ -52,6 +52,12 @@ TagManager:
   - name: Oil
     uniqueID: 1737933229
     locked: 0
+  - name: Gun
+    uniqueID: 3903186739
+    locked: 0
   - name: Car
     uniqueID: 2776486827
+    locked: 0
+  - name: Powerup_sign
+    uniqueID: 3908481243
     locked: 0

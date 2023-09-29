@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _p2Laps;
     [SerializeField] GameObject _laps;
     [SerializeField] TextMeshProUGUI _raceFinishedTxt;
+    [SerializeField] GameObject _p1PowerupSign;
+    [SerializeField] GameObject _p2PowerupSign;
 
     [Header("Leaderboard")]
     [SerializeField] GameObject _leaderboard;
@@ -86,6 +88,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         _startupText.gameObject.SetActive(false);
         _laps.SetActive(true);
+        _p1PowerupSign.gameObject.SetActive(true);
+        _p2PowerupSign.gameObject.SetActive(true);
         _player1.gameObject.SetActive(true);
         _player2.gameObject.SetActive(true);
     }

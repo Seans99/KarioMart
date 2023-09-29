@@ -9,6 +9,8 @@ public class Leaderboard : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _returningCounter;
 
+    [SerializeField] private int _returnCounter = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +22,12 @@ public class Leaderboard : MonoBehaviour
 
     IEnumerator ReturningCounterCourotine()
     {
-        _returningCounter.text = "5";
-        yield return new WaitForSeconds(1);
-        _returningCounter.text = "4";
-        yield return new WaitForSeconds(1); 
-        _returningCounter.text = "3";
-        yield return new WaitForSeconds(1); 
-        _returningCounter.text = "2";
-        yield return new WaitForSeconds(1); 
-        _returningCounter.text = "1";
-        yield return new WaitForSeconds(1); 
-        _returningCounter.text = "0";
+        while(_returnCounter < 0)
+        {
+            _returningCounter.text = _returnCounter.ToString();
+            yield return new WaitForSeconds(1);
+            _returnCounter--;
+        }
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1); // Selection screen
     }
