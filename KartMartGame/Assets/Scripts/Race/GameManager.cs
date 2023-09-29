@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _p1Laps;
     [SerializeField] TextMeshProUGUI _p2Laps;
     [SerializeField] GameObject _laps;
+    [SerializeField] TextMeshProUGUI _raceFinishedTxt;
 
     [Header("Leaderboard")]
     [SerializeField] GameObject _leaderboard;
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
         _player2.gameObject.SetActive(true);
     }
 
-    public void EndRace()
+    void EndRace()
     {
         _player1.gameObject.SetActive(false);
         _player2.gameObject.SetActive(false);

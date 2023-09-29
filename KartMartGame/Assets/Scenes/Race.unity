@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _restartBtn: {fileID: 1235674276}
-  _titleScreenBtn: {fileID: 1361451266}
+  _mainMenuBtn: {fileID: 1361451266}
   _closeMenuBtn: {fileID: 1445491777}
 --- !u!1 &986673131
 GameObject:
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leaderboard
+  m_text: Race finished
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 1361451267}
   - component: {fileID: 1361451266}
   m_Layer: 5
-  m_Name: Title_screen_btn
+  m_Name: Main_menu_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2724,7 +2724,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -197}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483007634
 MonoBehaviour:
@@ -2746,7 +2746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Returning to title screen
+  m_text: Returning to selection screen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2878,6 +2878,7 @@ MonoBehaviour:
   _p1Laps: {fileID: 1304859421}
   _p2Laps: {fileID: 554689267}
   _laps: {fileID: 1332219680}
+  _raceFinishedTxt: {fileID: 0}
   _leaderboard: {fileID: 155397308}
   _firstPlace: {fileID: 1227927006}
   _secondPlace: {fileID: 1877859479}
@@ -2939,7 +2940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title screen
+  m_text: Main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

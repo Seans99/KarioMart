@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class TrackSelect : MonoBehaviour
 {
+    [Header("Selectable tracks")]
     [SerializeField] private Sprite[] _tracks;
+
+    [Header("Selector buttons")]
     [SerializeField] private Button _nextBtn;
     [SerializeField] private Button _prevBtn;
 
+    [Header("SO")]
     [SerializeField] private GameData _gameData;
 
     private int selected = 0;

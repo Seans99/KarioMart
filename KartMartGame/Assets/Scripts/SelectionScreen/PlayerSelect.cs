@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class PlayerSelect : MonoBehaviour
 {
+    [Header("Selectable cars")]
     [SerializeField] private Sprite[] _cars;
+
+    [Header("Selector buttons")]
     [SerializeField] private Button _nextBtn;
     [SerializeField] private Button _prevBtn;
 
+    [Header("SO")]
     [SerializeField] private GameData _gameData;
 
+    [Header("Player ID")]
     [SerializeField] private int playerId;
 
     private int selected = 0;

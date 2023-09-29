@@ -12,12 +12,6 @@ public class Leaderboard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (gameObject.activeSelf == true)
         {
             StartCoroutine(ReturningCounterCourotine());
@@ -38,6 +32,6 @@ public class Leaderboard : MonoBehaviour
         yield return new WaitForSeconds(1); 
         _returningCounter.text = "0";
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(0); // Title screen
+        SceneManager.LoadScene(1); // Selection screen
     }
 }

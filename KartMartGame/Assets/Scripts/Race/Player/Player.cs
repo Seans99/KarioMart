@@ -40,13 +40,21 @@ public class Player : MonoBehaviour
     void Update()
     {
         moveDirection = _playerControls.ReadValue<Vector2>();
-          
     }
 
     void FixedUpdate()
     {
-        rb.AddForce(transform.up * moveDirection.y * _speed);
+        Movement();
+        Rotation();
+    }
 
+    void Movement()
+    {
+        rb.AddForce(transform.up * moveDirection.y * _speed);
+    }
+
+    void Rotation()
+    {
         Vector2 forward = transform.up * Vector2.Dot(rb.velocity, transform.up);
         Vector2 right = transform.right * Vector2.Dot(rb.velocity, transform.right);
 

@@ -543,7 +543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title screen
+  m_text: Main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -788,7 +788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &347098964
@@ -1828,10 +1828,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cars:
   - {fileID: 21300000, guid: 8b7c570d99bc29e4bb653ad617b40277, type: 3}
-  - {fileID: 21300000, guid: 0f548f9d2f2ae7f4186baae312710027, type: 3}
-  - {fileID: 21300000, guid: 415a870c7f8c31146b5eac8242af9393, type: 3}
-  - {fileID: 21300000, guid: 8c0a68d81c5283d4983c1e88cfa4a8e1, type: 3}
-  - {fileID: 21300000, guid: df8dcdc49ce59324f9b01aee5adca92a, type: 3}
+  - {fileID: 21300000, guid: be8ed126be5d2a148bccdfe708a53607, type: 3}
+  - {fileID: 21300000, guid: 26626ebfba8fb2f4ebfa0d28a4ba62c2, type: 3}
+  - {fileID: 21300000, guid: 4c60a4208ed663d4a976e1a86f121069, type: 3}
+  - {fileID: 21300000, guid: 44806c46ce8300b45a4773bfb2ebf9ff, type: 3}
   _nextBtn: {fileID: 1944239168}
   _prevBtn: {fileID: 654770518}
   _gameData: {fileID: 11400000, guid: a29a56629a562c745988392cb01cbf15, type: 2}
@@ -1991,9 +1991,9 @@ RectTransform:
   - {fileID: 710918519}
   m_Father: {fileID: 2004906285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 8, y: -400}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 80, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &834137571
@@ -2235,7 +2235,7 @@ GameObject:
   - component: {fileID: 874566422}
   - component: {fileID: 874566421}
   m_Layer: 5
-  m_Name: Title_screen_btn
+  m_Name: Main_menu_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,9 +2766,9 @@ RectTransform:
   - {fileID: 446707080}
   m_Father: {fileID: 2004906285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -8, y: -400}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -93, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1486690978
@@ -2806,7 +2806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -8, y: -54}
+  m_AnchoredPosition: {x: -4, y: -73}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1486690980
@@ -3438,10 +3438,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cars:
   - {fileID: 21300000, guid: 8b7c570d99bc29e4bb653ad617b40277, type: 3}
-  - {fileID: 21300000, guid: 0f548f9d2f2ae7f4186baae312710027, type: 3}
-  - {fileID: 21300000, guid: 415a870c7f8c31146b5eac8242af9393, type: 3}
-  - {fileID: 21300000, guid: 8c0a68d81c5283d4983c1e88cfa4a8e1, type: 3}
-  - {fileID: 21300000, guid: df8dcdc49ce59324f9b01aee5adca92a, type: 3}
+  - {fileID: 21300000, guid: be8ed126be5d2a148bccdfe708a53607, type: 3}
+  - {fileID: 21300000, guid: 26626ebfba8fb2f4ebfa0d28a4ba62c2, type: 3}
+  - {fileID: 21300000, guid: 4c60a4208ed663d4a976e1a86f121069, type: 3}
+  - {fileID: 21300000, guid: 44806c46ce8300b45a4773bfb2ebf9ff, type: 3}
   _nextBtn: {fileID: 472621177}
   _prevBtn: {fileID: 914388304}
   _gameData: {fileID: 11400000, guid: a29a56629a562c745988392cb01cbf15, type: 2}

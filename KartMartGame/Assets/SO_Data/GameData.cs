@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameData : ScriptableObject
 {
-    private Sprite player1;
-    private Sprite player2;
+    private Sprite player1; // Player 1 car
+    private Sprite player2; // Player 2 car
     private int trackId;
 
     public Sprite Player1

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SelectionScreenUI : MonoBehaviour
 {
+    [Header("Selection screen buttons")]
     [SerializeField] private Button _startRaceBtn;
     [SerializeField] private Button _titleScreenBtn;
 
@@ -24,6 +25,6 @@ public class SelectionScreenUI : MonoBehaviour
 
     void ReturnToTitleScreen()
     {
-        SceneManager.LoadScene(0); // Title screen
+        SceneManager.LoadScene(0); // Main menu
     }
 }
