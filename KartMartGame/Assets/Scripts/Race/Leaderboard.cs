@@ -22,7 +22,7 @@ public class Leaderboard : MonoBehaviour
 
     IEnumerator ReturningCounterCourotine()
     {
-        while(_returnCounter < 0)
+        while(_returnCounter >= 0)
         {
             _returningCounter.text = _returnCounter.ToString();
             yield return new WaitForSeconds(1);

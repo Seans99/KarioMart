@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] private InputAction _playerControls;
 
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
 
     float rotationAngle = 0;
 
@@ -33,7 +32,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -51,15 +49,15 @@ public class Player : MonoBehaviour
     void Movement()
     {
         rb.AddForce(transform.up * moveDirection.y * _speed);
-    }
 
-    void Rotation()
-    {
         Vector2 forward = transform.up * Vector2.Dot(rb.velocity, transform.up);
         Vector2 right = transform.right * Vector2.Dot(rb.velocity, transform.right);
 
         rb.velocity = forward + right * _carDrift;
+    }
 
+    void Rotation()
+    {
         float minSpeedBeforeTurn = (rb.velocity.magnitude / 6);
         minSpeedBeforeTurn = Mathf.Clamp01(minSpeedBeforeTurn);
 
