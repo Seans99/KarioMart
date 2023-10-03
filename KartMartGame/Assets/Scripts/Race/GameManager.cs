@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
     private int _currentLapP1 = 0;
     private int _currentLapP2 = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         SpriteRenderer playerCar1 = _player1.gameObject.GetComponent<SpriteRenderer>();
@@ -44,10 +42,18 @@ public class GameManager : MonoBehaviour
         GameManagerStatic.gameManager = this;
         Instantiate(_tracks[_gameData.TrackId], transform.position, Quaternion.identity);
 
+        _laps.SetActive(true);
+        _p1PowerupSign.gameObject.SetActive(true);
+        _p2PowerupSign.gameObject.SetActive(true);
+
+        _player1.gameObject.SetActive(true);
+        _player2.gameObject.SetActive(true);
+        _player1.GetComponent<Player>().enabled = false; 
+        _player2.GetComponent<Player>().enabled = false;
+
         StartCoroutine(CountDown());
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -55,6 +61,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             _pauseMenu.SetActive(true);
         }
+        
         if (_currentLapP1 > 3 || _currentLapP2 > 3)
         {
             if (_currentLapP1 > 3)
@@ -75,23 +82,22 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CountDown() 
     {
+        int count = 3;
         _startupText.gameObject.SetActive(true);
         _startupText.text = "Starting in...";
         yield return new WaitForSeconds(1.5f);
-        _startupText.text = "3";
-        yield return new WaitForSeconds(1);
-        _startupText.text = "2";
-        yield return new WaitForSeconds(1);
-        _startupText.text = "1";
-        yield return new WaitForSeconds(1);
+        while (count > 0)
+        {
+            _startupText.text = count.ToString();
+            yield return new WaitForSeconds(1);
+            count--;
+        }
         _startupText.text = "GO!";
         yield return new WaitForSeconds(0.5f);
         _startupText.gameObject.SetActive(false);
-        _laps.SetActive(true);
-        _p1PowerupSign.gameObject.SetActive(true);
-        _p2PowerupSign.gameObject.SetActive(true);
-        _player1.gameObject.SetActive(true);
-        _player2.gameObject.SetActive(true);
+        
+        _player1.GetComponent<Player>().enabled = true;
+        _player2.GetComponent<Player>().enabled = true;
     }
 
     void EndRace()

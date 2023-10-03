@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +9,6 @@ public class Leaderboard : MonoBehaviour
 
     [SerializeField] private int _returnCounter = 10;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (gameObject.activeSelf == true)

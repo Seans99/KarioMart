@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +15,6 @@ public class TrackSelect : MonoBehaviour
 
     private int selected = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         Button next = _nextBtn.GetComponent<Button>();
@@ -26,7 +23,6 @@ public class TrackSelect : MonoBehaviour
         prev.onClick.AddListener(Prev);
     }
 
-    // Update is called once per frame
     void Update()
     {
         gameObject.GetComponent<Image>().sprite = _tracks[selected];

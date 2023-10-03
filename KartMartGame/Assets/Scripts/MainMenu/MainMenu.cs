@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +8,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button _playBtn;
     [SerializeField] Button _quitBtn;
 
-    // Start is called before the first frame update
     void Start()
     {
         Button play = _playBtn.GetComponent<Button>();

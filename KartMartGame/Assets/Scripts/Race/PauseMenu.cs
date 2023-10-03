@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +9,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] Button _mainMenuBtn;
     [SerializeField] Button _closeMenuBtn;
 
-    // Start is called before the first frame update
     void Start()
     {
         Button restart = _restartBtn.GetComponent<Button>();
