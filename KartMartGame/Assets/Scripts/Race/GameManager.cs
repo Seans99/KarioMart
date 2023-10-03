@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _p1Laps;
     [SerializeField] TextMeshProUGUI _p2Laps;
     [SerializeField] GameObject _laps;
-    [SerializeField] TextMeshProUGUI _raceFinishedTxt;
     [SerializeField] GameObject _p1PowerupSign;
     [SerializeField] GameObject _p2PowerupSign;
 
@@ -53,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Time.timeScale = 0f;
             _pauseMenu.SetActive(true);
         }
         if (_currentLapP1 > 3 || _currentLapP2 > 3)

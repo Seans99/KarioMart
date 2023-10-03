@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     void CloseMenu()
     {
+        Time.timeScale = 1.0f;
         gameObject.SetActive(false);
     }
 }
