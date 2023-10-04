@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunPowerup : MonoBehaviour
+public class SpeedPowerup : MonoBehaviour
 {
     [Header("Powerup ID")]
     [SerializeField] int _powerupId;

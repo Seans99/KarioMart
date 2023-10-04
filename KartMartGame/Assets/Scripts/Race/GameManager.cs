@@ -22,17 +22,24 @@ public class GameManager : MonoBehaviour
 
     [Header("Leaderboard")]
     [SerializeField] GameObject _leaderboard;
-    [SerializeField] TextMeshProUGUI _firstPlace; 
+    [SerializeField] TextMeshProUGUI _firstPlace;
     [SerializeField] TextMeshProUGUI _secondPlace;
 
     [Header("SO")]
     [SerializeField] GameData _gameData;
+    [SerializeField] PlayerCollectedPowerup _playerCollectedPowerup;
 
     private int _currentLapP1 = 0;
     private int _currentLapP2 = 0;
 
     void Start()
     {
+        // Reset collected powerups SO
+        _playerCollectedPowerup.P1Collected = false;
+        _playerCollectedPowerup.P1Powerup = 0;
+        _playerCollectedPowerup.P2Collected = false;
+        _playerCollectedPowerup.P2Powerup = 0;
+
         SpriteRenderer playerCar1 = _player1.gameObject.GetComponent<SpriteRenderer>();
         playerCar1.sprite = _gameData.Player1;
 

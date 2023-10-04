@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float _carDrift = 0.95f;
     [SerializeField] private InputAction _playerControls;
 
+    [Header("Prefabs")]
+    [SerializeField] GameObject _oilPrefab;
+
     private Rigidbody2D rb;
 
     float rotationAngle = 0;
@@ -61,6 +64,11 @@ public class Player : MonoBehaviour
         rb.MoveRotation(rotationAngle);
     }
 
+    public void DropOil()
+    {
+        Instantiate(_oilPrefab, transform.position, Quaternion.identity);
+    }
+
     public void ReducedSpeed()
     {
         StartCoroutine(ReduceSpeedCourotine());
@@ -71,5 +79,17 @@ public class Player : MonoBehaviour
         _speed /= 2;
         yield return new WaitForSeconds(2);
         _speed *= 2;
+    }
+
+    public void IncreaseSpeed()
+    {
+        StartCoroutine(IncreaseSpeedCourotine());
+    }
+
+    IEnumerator IncreaseSpeedCourotine()
+    {
+        _speed *= 3;
+        yield return new WaitForSeconds(2);
+        _speed /= 3;
     }
 }

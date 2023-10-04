@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -43,9 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Powerup_sign
-    uniqueID: 3908481243
-    locked: 0
   - name: Track
     uniqueID: 3028915557
     locked: 0
@@ -57,6 +55,12 @@ TagManager:
     locked: 0
   - name: Gun
     uniqueID: 3903186739
+    locked: 0
+  - name: Powerup
+    uniqueID: 903298471
+    locked: 0
+  - name: Powerup_sign
+    uniqueID: 3908481243
     locked: 0
   - name: Car
     uniqueID: 2776486827

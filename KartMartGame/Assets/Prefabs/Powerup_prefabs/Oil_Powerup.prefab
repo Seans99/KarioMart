@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1826592645979966427}
   m_Layer: 0
   m_Name: Oil_Powerup
-  m_TagString: Untagged
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 903298471
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.9245283, g: 0.76345533, b: 0.004360993, a: 1}
@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296f2de0490f9d74987d8ea1fe72fb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerupId: 1
+  _playerCollectedPowerup: {fileID: 11400000, guid: a52936092920f9b4ba0e223e3e671f98, type: 2}
 --- !u!1 &7568962106895786120
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +163,8 @@ Transform:
   m_GameObject: {fileID: 7568962106895786120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: -0.0115, y: 0.0032, z: 0}
+  m_LocalScale: {x: 0.5109252, y: 0.52385575, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8056280895657724205}
@@ -205,8 +207,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 903298471
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4b7352a735368514e85e731a92ab87fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -245,8 +247,8 @@ Transform:
   m_GameObject: {fileID: 8656345973552433168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.016, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalPosition: {x: -0.0204, y: -0.0029, z: 0}
+  m_LocalScale: {x: 0.8872932, y: 0.8872308, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8056280895657724205}
@@ -289,8 +291,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 903298471
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.9626852, b: 0, a: 1}
