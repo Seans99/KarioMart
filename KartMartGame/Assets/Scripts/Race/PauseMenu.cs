@@ -16,18 +16,20 @@ public class PauseMenu : MonoBehaviour
         Button close = _closeMenuBtn.GetComponent<Button>();
 
         restart.onClick.AddListener(Restart);
-        titleScreen.onClick.AddListener(TitleScreen);
+        titleScreen.onClick.AddListener(MainMenu);
         close.onClick.AddListener(CloseMenu);
     }
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(2); // Race scene
     }
 
-    void TitleScreen()
+    void MainMenu()
     {
-        SceneManager.LoadScene(0); // Title screen
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(0); // Main menu
     }
 
     void CloseMenu()

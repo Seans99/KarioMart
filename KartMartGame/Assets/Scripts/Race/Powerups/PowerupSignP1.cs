@@ -18,20 +18,26 @@ public class PowerupSignP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_playerCollectedPowerup.P1Collected == true && _oilPowerupEmblem.activeSelf == false || _gunPowerUpEmblem.activeSelf == false)
+        if (_playerCollectedPowerup.P1Collected == true)
         {
             switch(_playerCollectedPowerup.P1Powerup)
             {
                 case 1:
                     _oilPowerupEmblem.SetActive(true);
+                    _speedPowerupEmblem.SetActive(false);
+                    _gunPowerUpEmblem.SetActive(false);
                     break;
 
                 case 2:
                     _speedPowerupEmblem.SetActive(true);
+                    _oilPowerupEmblem.SetActive(false);
+                    _gunPowerUpEmblem.SetActive(false);
                     break;
 
                 case 3:
                     _gunPowerUpEmblem.SetActive(true);
+                    _oilPowerupEmblem.SetActive(false);
+                    _speedPowerupEmblem.SetActive(false);
                     break;
             }
         }

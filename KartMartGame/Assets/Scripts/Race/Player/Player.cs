@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] GameObject _oilPrefab;
 
+    [Header("Powerup settings")]
+    [SerializeField] private float _speedIncrease = 2f;
+    [SerializeField] private float _speedReduction = 2.5f;
+
     private Rigidbody2D rb;
 
     float rotationAngle = 0;
@@ -71,25 +75,11 @@ public class Player : MonoBehaviour
 
     public void ReducedSpeed()
     {
-        StartCoroutine(ReduceSpeedCourotine());
-    }
-
-    IEnumerator ReduceSpeedCourotine()
-    {
-        _speed /= 2;
-        yield return new WaitForSeconds(2);
-        _speed *= 2;
+        rb.velocity /= _speedReduction;
     }
 
     public void IncreaseSpeed()
     {
-        StartCoroutine(IncreaseSpeedCourotine());
-    }
-
-    IEnumerator IncreaseSpeedCourotine()
-    {
-        _speed *= 3;
-        yield return new WaitForSeconds(2);
-        _speed /= 3;
+        rb.velocity *= _speedIncrease;
     }
 }

@@ -106,7 +106,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1518480469
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8b7c570d99bc29e4bb653ad617b40277, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,52 +206,15 @@ MonoBehaviour:
   _speed: 3
   _rotationSpeed: 5
   _carDrift: 0.95
-  playerControls:
+  _playerControls:
     m_Name: Player Controls
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e7c9284b-62cb-43a1-b874-d7cf29c11432
+    m_Id: 7853c1fd-2f4a-47b3-8be8-3930e5f41a19
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: WASD
-      m_Id: 7f9a31c4-9b45-4cc7-8864-5e7aa2ce15d9
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controls
-      m_Flags: 4
-    - m_Name: up
-      m_Id: f338e45e-7665-4e90-8ef1-bb8bc5029115
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controls
-      m_Flags: 8
-    - m_Name: down
-      m_Id: eca98ce7-2348-4a7f-b5f3-0ffcfb0b1962
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controls
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 8f05f5e5-dd32-4b67-85cb-8098a46c3157
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controls
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 61cac6a2-e7cc-4822-81a7-0353313bf456
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controls
-      m_Flags: 8
+    m_SingletonActionBindings: []
     m_Flags: 0
+  _oilPrefab: {fileID: 0}
+  _speedIncrease: 2
+  _speedReduction: 2.5
