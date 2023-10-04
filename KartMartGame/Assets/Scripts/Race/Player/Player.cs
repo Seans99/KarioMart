@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] GameObject _oilPrefab;
+    [SerializeField] GameObject _bulletsPrefab;
 
     [Header("Powerup settings")]
     [SerializeField] private float _speedIncrease = 2f;
@@ -81,5 +82,21 @@ public class Player : MonoBehaviour
     public void IncreaseSpeed()
     {
         rb.velocity *= _speedIncrease;
+    }
+
+    public void Fire()
+    {
+        StartCoroutine(FireCourotine());
+    }
+
+    IEnumerator FireCourotine()
+    {
+        int counter = 5;
+        while (counter <= 0)
+        {
+            // Fire once
+            yield return new WaitForSeconds(0.2f);
+            counter--;
+        }
     }
 }

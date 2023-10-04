@@ -76,6 +76,7 @@ public class PowerupSignP2 : MonoBehaviour
     public void GunPowerupUsed()
     {
         _gunPowerUpEmblem.SetActive(false);
+        _player2.GetComponent<Player>().Fire();
         ResetSO();
     }
 
