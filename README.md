@@ -12,3 +12,5 @@ TO PLAY
 - Press the "Start race" button
 
 Controls can be found in the controls scene of the game.
+
+Created by Sean Schelvis

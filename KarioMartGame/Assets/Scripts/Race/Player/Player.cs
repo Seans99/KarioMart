@@ -87,7 +87,8 @@ public class Player : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(_bulletsPrefab, rb.position, Quaternion.Euler(0, 0, rb.rotation));
+        Vector3 spawnPosition = transform.position + transform.up * 1.5f;
+        Instantiate(_bulletsPrefab, spawnPosition, Quaternion.Euler(0, 0, rb.rotation));
     }
 
     public void Hit()
