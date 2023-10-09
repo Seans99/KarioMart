@@ -21,14 +21,30 @@ public class SpeedPowerup : MonoBehaviour
         {
             _playerCollectedPowerup.P1Powerup = _powerupId;
             _playerCollectedPowerup.P1Collected = true;
-            Destroy(gameObject);
+            StartCoroutine(ResetPowerup());
         }
 
         if (other.CompareTag("Player2"))
         {
             _playerCollectedPowerup.P2Powerup = _powerupId;
             _playerCollectedPowerup.P2Collected = true;
-            Destroy(gameObject);
+            StartCoroutine(ResetPowerup());
         }
+    }
+
+    IEnumerator ResetPowerup()
+    {
+        SpriteRenderer[] All = GetComponentsInChildren<SpriteRenderer>();
+        foreach (var sr in All)
+        {
+            sr.enabled = false;
+        }
+        GetComponent<CircleCollider2D>().enabled = false;
+        yield return new WaitForSeconds(10);
+        foreach (var sr in All)
+        {
+            sr.enabled = true;
+        }
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 }
