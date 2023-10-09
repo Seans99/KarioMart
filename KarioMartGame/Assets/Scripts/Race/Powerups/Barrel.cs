@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullets : MonoBehaviour
+public class Barrel : MonoBehaviour
 {
     [SerializeField] private float _bulletsSpeed = 10f;
 

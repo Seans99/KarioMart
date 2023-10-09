@@ -34,6 +34,28 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (_player1 == null ||  _player2 == null)
+        {
+            Debug.LogError("A player is NULL");
+        }
+        if (_tracks == null)
+        {
+            Debug.LogError("Tracks is NULL");
+        }
+        if (_startupText == null || _pauseMenu == null || _p1Laps == null 
+            || _p2Laps == null || _laps == null ||_p1PowerupSign == null || _p2PowerupSign == null)
+        {
+            Debug.LogError("UI element is NULL");
+        }
+        if (_leaderboard == null || _firstPlace == null || _secondPlace == null)
+        {
+            Debug.LogError("Leaderboard element is NULL");
+        }
+        if (_gameData == null || _playerCollectedPowerup == null)
+        {
+            Debug.LogError("SO element is NULL");
+        }
+
         // Reset collected powerups SO
         _playerCollectedPowerup.P1Collected = false;
         _playerCollectedPowerup.P1Powerup = 0;

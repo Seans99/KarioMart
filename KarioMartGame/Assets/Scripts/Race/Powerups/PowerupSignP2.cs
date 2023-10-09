@@ -6,7 +6,7 @@ public class PowerupSignP2 : MonoBehaviour
 {
     [Header("Powerup emblems")]
     [SerializeField] GameObject _oilPowerupEmblem;
-    [SerializeField] GameObject _gunPowerUpEmblem;
+    [SerializeField] GameObject _barrelPowerUpEmblem;
     [SerializeField] GameObject _speedPowerupEmblem;
 
     [Header("SO")]
@@ -25,17 +25,17 @@ public class PowerupSignP2 : MonoBehaviour
                 case 1:
                     _oilPowerupEmblem.SetActive(true);
                     _speedPowerupEmblem.SetActive(false);
-                    _gunPowerUpEmblem.SetActive(false);
+                    _barrelPowerUpEmblem.SetActive(false);
                     break;
 
                 case 2:
                     _speedPowerupEmblem.SetActive(true);
                     _oilPowerupEmblem.SetActive(false);
-                    _gunPowerUpEmblem.SetActive(false);
+                    _barrelPowerUpEmblem.SetActive(false);
                     break;
 
                 case 3:
-                    _gunPowerUpEmblem.SetActive(true);
+                    _barrelPowerUpEmblem.SetActive(true);
                     _oilPowerupEmblem.SetActive(false);
                     _speedPowerupEmblem.SetActive(false);
                     break;
@@ -61,6 +61,14 @@ public class PowerupSignP2 : MonoBehaviour
 
     public void OilPowerupUsed()
     {
+        if (_oilPowerupEmblem == null)
+        {
+            Debug.LogError("Oil powerup emblem is NULL");
+        }
+        if (_player2 == null)
+        {
+            Debug.LogError("Player 1 is NULL");
+        }
         _oilPowerupEmblem.SetActive(false);
         _player2.GetComponent<Player>().DropOil();
         ResetSO();
@@ -68,6 +76,14 @@ public class PowerupSignP2 : MonoBehaviour
 
     public void SpeedPowerupdUsed()
     {
+        if (_speedPowerupEmblem == null)
+        {
+            Debug.LogError("Speed powerup emblem is NULL");
+        }
+        if (_player2 == null)
+        {
+            Debug.LogError("Player 1 is NULL");
+        }
         _speedPowerupEmblem.SetActive(false);
         _player2.GetComponent<Player>().IncreaseSpeed();
         ResetSO();
@@ -75,19 +91,35 @@ public class PowerupSignP2 : MonoBehaviour
 
     public void GunPowerupUsed()
     {
-        _gunPowerUpEmblem.SetActive(false);
+        if (_barrelPowerUpEmblem == null)
+        {
+            Debug.LogError("Barrel powerup emblem is NULL");
+        }
+        if (_player2 == null)
+        {
+            Debug.LogError("Player 1 is NULL");
+        }
+        _barrelPowerUpEmblem.SetActive(false);
         StartCoroutine(GunFiring());
         ResetSO();
     }
 
     IEnumerator GunFiring()
     {
+        if (_player2 == null)
+        {
+            Debug.LogError("Player 1 is NULL");
+        }
         _player2.GetComponent<Player>().Fire();
         yield return new WaitForSeconds(0.5f);
     }
 
     void ResetSO()
     {
+        if (_playerCollectedPowerup == null)
+        {
+            Debug.LogError("_playerCollectedPowerup is NULL");
+        }
         _playerCollectedPowerup.P2Powerup = 0;
         _playerCollectedPowerup.P2Collected = false;
     }

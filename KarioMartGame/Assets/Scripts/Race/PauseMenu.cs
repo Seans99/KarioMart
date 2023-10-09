@@ -12,11 +12,24 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         Button restart = _restartBtn.GetComponent<Button>();
-        Button titleScreen = _mainMenuBtn.GetComponent<Button>();
+        Button mainMenu = _mainMenuBtn.GetComponent<Button>();
         Button close = _closeMenuBtn.GetComponent<Button>();
 
+        if (restart == null)
+        {
+            Debug.LogError("Restart button is NULL");
+        }
+        if (mainMenu == null)
+        {
+            Debug.LogError("Main menu button is NULL");
+        }
+        if (close == null)
+        {
+            Debug.LogError("Close button is NULL");
+        }
+
         restart.onClick.AddListener(Restart);
-        titleScreen.onClick.AddListener(MainMenu);
+        mainMenu.onClick.AddListener(MainMenu);
         close.onClick.AddListener(CloseMenu);
     }
 

@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] GameObject _oilPrefab;
-    [SerializeField] GameObject _bulletsPrefab;
+    [SerializeField] GameObject _barrelPrefab;
 
     [Header("Powerup settings")]
     [SerializeField] private float _speedIncrease = 2f;
@@ -38,6 +38,22 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null )
+        {
+            Debug.LogError("Rigidbody is NULL");
+        }
+        if (_playerControls == null)
+        {
+            Debug.LogError("Player controls is NULL");
+        }
+        if (_oilPrefab == null)
+        {
+            Debug.LogError("Oil prefab is NULL");
+        }
+        if (_barrelPrefab == null)
+        {
+            Debug.LogError("Barrel prefab is NULL");
+        }
     }
 
     void Update()
@@ -88,7 +104,7 @@ public class Player : MonoBehaviour
     public void Fire()
     {
         Vector3 spawnPosition = transform.position + transform.up * 1.5f;
-        Instantiate(_bulletsPrefab, spawnPosition, Quaternion.Euler(0, 0, rb.rotation));
+        Instantiate(_barrelPrefab, spawnPosition, Quaternion.Euler(0, 0, rb.rotation));
     }
 
     public void Hit()

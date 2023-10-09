@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startRaceBtn: {fileID: 183196302}
-  _titleScreenBtn: {fileID: 874566421}
+  _mainMenuBtn: {fileID: 874566421}
 --- !u!1 &446707079
 GameObject:
   m_ObjectHideFlags: 0

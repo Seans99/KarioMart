@@ -14,6 +14,20 @@ public class MainMenu : MonoBehaviour
         Button play = _playBtn.GetComponent<Button>();
         Button controls = _controlsBtn.GetComponent<Button>();
         Button quit = _quitBtn.GetComponent<Button>();
+
+        if (play == null )
+        {
+            Debug.LogError("Play button is ´NULL");
+        }
+        if (controls == null)
+        {
+            Debug.LogError("Controls button is NULL");
+        }
+        if (quit == null)
+        {
+            Debug.LogError("Quit button is NULL");
+        }
+
         play.onClick.AddListener(PlayGame);
         controls.onClick.AddListener(Controls);
         quit.onClick.AddListener(QuitGame);

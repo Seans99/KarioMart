@@ -11,6 +11,10 @@ public class Leaderboard : MonoBehaviour
 
     void Start()
     {
+        if (_returningCounter == null)
+        {
+            Debug.LogError("Returning counter is NULL");
+        }
         if (gameObject.activeSelf == true)
         {
             StartCoroutine(ReturningCounterCourotine());

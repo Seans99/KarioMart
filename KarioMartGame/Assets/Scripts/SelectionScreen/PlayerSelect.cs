@@ -24,6 +24,27 @@ public class PlayerSelect : MonoBehaviour
         next.onClick.AddListener(Next);
         Button prev = _prevBtn.GetComponent<Button>();
         prev.onClick.AddListener(Prev);
+
+        if (next == null)
+        {
+            Debug.LogError("Next button is NULL");
+        }
+        if (prev == null)
+        {
+            Debug.LogError("Prev button is NULL");
+        }
+        if (_cars == null)
+        {
+            Debug.LogError("Cars is NULL");
+        }
+        if (_gameData == null)
+        {
+            Debug.LogError("Gamedata is NULL");
+        }
+        if (playerId == 0) 
+        {
+            Debug.LogError("Player ID not set");
+        }
     }
 
     void Update()

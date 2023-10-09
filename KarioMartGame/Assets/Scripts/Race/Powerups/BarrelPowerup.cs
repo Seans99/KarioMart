@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunPowerup : MonoBehaviour
+public class BarrelPowerup : MonoBehaviour
 {
     [Header("Powerup ID")]
     [SerializeField] int _powerupId;
@@ -12,6 +12,11 @@ public class GunPowerup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_playerCollectedPowerup == null)
+        {
+            Debug.LogError("_playerCollectedPowerup is NULL");
+        }
+
         if (other.CompareTag("Player1"))
         {
             _playerCollectedPowerup.P1Powerup = _powerupId;

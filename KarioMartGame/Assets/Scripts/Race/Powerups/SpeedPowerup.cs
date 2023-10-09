@@ -12,6 +12,11 @@ public class SpeedPowerup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (_playerCollectedPowerup == null)
+        {
+            Debug.LogError("_playerCollectedPowerup is NULL");
+        }
+
         if (other.CompareTag("Player1"))
         {
             _playerCollectedPowerup.P1Powerup = _powerupId;
