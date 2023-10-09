@@ -16,7 +16,7 @@ TO PLAY
 ![Selection Screen](GameImages/SelectionScreen.png)
 - Press the "Start race" button to start the race on the selected track. 
   Before the race starts, a counter will show up.
-![Track 1](GameImages/Track1.png)
+![Track 3](GameImages/Track3.png)
 - To pause the game, press the ESC button.
 ![Pause Menu](GameImages/PauseMenu.png)
 - After the race is finished, a leaderboard will show, and a timer will count down. 
@@ -33,3 +33,4 @@ Controls for the game can be found in the controls scene of the game.
 Created by Sean Schelvis 
 
 Sprite Assets by Kenney.nl
+Powerup emblems by Mika Schelvis
