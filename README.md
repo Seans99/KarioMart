@@ -1,9 +1,13 @@
 # KarioMart
 2D Racing game - School project
 
+---
+
 TO START
 - Open project folder with the Unity editor (2022.3.9f1).
 - Go into MainMenu scene if not already and press the Start scene button.
+
+---
 
 TO PLAY
 - Press the play button in the Main menu.
