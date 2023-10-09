@@ -26,4 +26,6 @@ Controls for the game can be found in the controls scene of the game.
 
 ---
 
-Created by Sean Schelvis
+Created by Sean Schelvis 
+
+Sprite Assets by Kenney.nl
