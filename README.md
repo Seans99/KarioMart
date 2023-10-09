@@ -14,13 +14,13 @@ TO PLAY
 ![Main Menu](GameImages/MainMenu.png)
 - In the selection screen select a car for each player and a track to race on.
 ![Selection Screen](GameImages/SelectionScreen.png)
-- Press the "Start race" button to start the race on the selected track. 
-  Before the race starts, a counter will show up.
+- Press the "Start race" button to begin the race on the selected track. 
+  Before the race starts, a counter count down and than the players can start racing.
 ![Track 3](GameImages/Track3.png)
 - To pause the game, press the ESC button.
 ![Pause Menu](GameImages/PauseMenu.png)
-- After the race is finished, a leaderboard will show, and a timer will count down. 
-  When the timer reaches 0, you will be returned to the selection screen.
+- After the race is finished, a leaderboard will pop up, and a timer will count down. 
+  When the timer reaches 0, the players will be returned to the selection screen.
 ![Leaderboard](GameImages/Leaderboard.png)
 
 ---
