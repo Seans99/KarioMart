@@ -6,7 +6,9 @@ This game is currently for a minimal of 2 players.
 In this game the players can select a car and track to race on.
 During the race the players can use various powerups to help them win.
 
-In this project I have tried write the code so that is easy to expand on. 
+---
+
+In this project I have tried to write the code so that is easy to expand on. 
 For example it is now easy to add more tracks/cars in the game. 
 I also tried to keep the code clean and readable for any other programmer that would read through my code.
 
@@ -15,6 +17,10 @@ I also tried to keep the code clean and readable for any other programmer that w
 TO START
 - Open project folder with the Unity editor (2022.3.9f1).
 - Go into MainMenu scene if not already and press the Start scene button.
+
+You might have to install these packages in the editor.
+- TextMeshPro
+- Input manager (new input system)
 
 ---
 
