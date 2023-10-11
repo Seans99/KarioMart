@@ -1,6 +1,15 @@
 # KarioMart
 2D Racing game - School project
 
+In this project I have created a 2D top view racing game. 
+This game is currently for a minimal of 2 players.
+In this game the players can select a car and track to race on.
+During the race the players can use various powerups to help them win.
+
+In this project I have tried write the code so that is easy to expand on. 
+For example it is now easy to add more tracks/cars in the game. 
+I also tried to keep the code clean and readable for any other programmer that would read through my code.
+
 ---
 
 TO START
